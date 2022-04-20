@@ -1,0 +1,17 @@
+D:\BT trong trường\angular\WebApi\Business\bin\Debug\net5.0\Business.deps.json
+D:\BT trong trường\angular\WebApi\Business\bin\Debug\net5.0\Business.dll
+D:\BT trong trường\angular\WebApi\Business\bin\Debug\net5.0\Business.pdb
+D:\BT trong trường\angular\WebApi\Business\bin\Debug\net5.0\Contracts.dll
+D:\BT trong trường\angular\WebApi\Business\bin\Debug\net5.0\DataAccessor.dll
+D:\BT trong trường\angular\WebApi\Business\bin\Debug\net5.0\Contracts.pdb
+D:\BT trong trường\angular\WebApi\Business\bin\Debug\net5.0\DataAccessor.pdb
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\Business.dll
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\refint\Business.dll
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\Business.pdb
+D:\BT trong trường\angular\WebApi\Business\obj\Debug\net5.0\ref\Business.dll
