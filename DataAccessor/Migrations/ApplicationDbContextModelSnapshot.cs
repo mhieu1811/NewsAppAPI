@@ -79,51 +79,17 @@ namespace DataAccessor.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("TypeID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TypeID");
 
                     b.ToTable("News");
-                });
-
-            modelBuilder.Entity("DataAccessor.Entities.NewsDetails", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("CreatorId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("NewsID")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("NewsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("NewsTypeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("Published")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("TypeID")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NewsId");
-
-                    b.HasIndex("NewsTypeId");
-
-                    b.ToTable("NewsDetails");
                 });
 
             modelBuilder.Entity("DataAccessor.Entities.Pictures", b =>
@@ -247,19 +213,15 @@ namespace DataAccessor.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("DataAccessor.Entities.NewsDetails", b =>
+            modelBuilder.Entity("DataAccessor.Entities.News", b =>
                 {
-                    b.HasOne("DataAccessor.Entities.News", "News")
-                        .WithMany("Details")
-                        .HasForeignKey("NewsId");
+                    b.HasOne("DataAccessor.Entities.Type", "Type")
+                        .WithMany("News")
+                        .HasForeignKey("TypeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("DataAccessor.Entities.Type", "NewsType")
-                        .WithMany("NewsDetails")
-                        .HasForeignKey("NewsTypeId");
-
-                    b.Navigation("News");
-
-                    b.Navigation("NewsType");
+                    b.Navigation("Type");
                 });
 
             modelBuilder.Entity("DataAccessor.Entities.Pictures", b =>
@@ -273,14 +235,12 @@ namespace DataAccessor.Migrations
                 {
                     b.Navigation("Comments");
 
-                    b.Navigation("Details");
-
                     b.Navigation("Pictures");
                 });
 
             modelBuilder.Entity("DataAccessor.Entities.Type", b =>
                 {
-                    b.Navigation("NewsDetails");
+                    b.Navigation("News");
                 });
 
             modelBuilder.Entity("DataAccessor.Entities.User", b =>

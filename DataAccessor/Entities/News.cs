@@ -14,8 +14,8 @@ namespace DataAccessor.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         public string Content { get; set; }
-        
-        public IEnumerable<NewsDetails> Details { get; set; }
+        public Guid TypeID { get; set; }
+        public Type Type { get; set; }
         public IEnumerable<Pictures> Pictures { get; set; }
         public IEnumerable<Comments> Comments { get; set; }
 

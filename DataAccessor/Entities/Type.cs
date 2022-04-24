@@ -14,7 +14,7 @@ namespace DataAccessor.Entities
         [Required]
         [StringLength(maximumLength: 100)]
         public string Desc { get; set; }
-        public ICollection<NewsDetails> NewsDetails { get; set; }
+        public ICollection<News> News { get; set; }
 
 
     }

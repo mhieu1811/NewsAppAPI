@@ -34,6 +34,8 @@ namespace WebApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi", Version = "v1" });
             });
             services.AddBusinessLayer(Configuration);
+            services.AddAutoMapper(typeof(AutoMapperProfile));
+
 
         }
 

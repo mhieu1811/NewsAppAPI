@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using DataAccessor;
 using System.Reflection;
 using System;
+using DataAccessor.Interfaces;
 
 namespace Business
 {
@@ -12,7 +13,8 @@ namespace Business
         {
             services.AddDataAccessorLayer(configuration);
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
-  
+            services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+
 
 
             /*services.AddRefitClient<IIdentityProviderService>()

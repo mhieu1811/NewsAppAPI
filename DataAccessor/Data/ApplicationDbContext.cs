@@ -8,7 +8,6 @@ namespace DataAccessor.Data
 
         public DbSet<Comments> Comments { get; set; }
         public DbSet<News> News { get; set; }
-        public DbSet<NewsDetails> NewsDetails { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Pictures> Pictures { get; set; }
         public DbSet<Type> Types { get; set; }  
